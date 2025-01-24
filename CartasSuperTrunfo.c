@@ -4,10 +4,10 @@
 // Tema 1 - Cadastro das Cartas
 // Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
 // Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
+// Teste larissa
 
-
-int main() {
+int main()
+{
     // Área para definição das variáveis para armazenar as propriedades das cidades
     char codigo[4]; // Código da cidade (ex.: A01, B02)
     int populacao;
@@ -40,7 +40,27 @@ int main() {
     printf("  PIB: %.2f bilhões de USD\n", pib);
     printf("  Pontos turísticos: %d\n", pontos_turisticos);
 
+    int densidadePopulacional;
+    int pibPerCapita;
+
+
+
+    // Cálculo das novas propriedades
+   densidadePopulacional = populacao / area; // Densidade populacional
+    pibPerCapita = pib / populacao;           // PIB per capita
+
+    // Área para exibição dos dados da cidade
+    printf("Dados cadastrados: \n");
+    printf("  Código: %s\n", codigo);
+    printf("  População: %d\n", populacao);
+    printf("  Área: %.2f km²\n", area);
+    printf("  PIB: %.2f bilhões de USD\n", pib);
+    printf("  Pontos turísticos: %d\n", pontos_turisticos);
+
+    // Exibição das propriedades calculadas
+    printf("\nPropriedades calculadas:\n");
+    printf("  Densidade populacional: %.2f hab/km²\n", densidadePopulacional);
+    printf("  PIB per capita: %.6f bilhões de USD/habitante\n", pibPerCapita);
+
     return 0;
 }
-
-
